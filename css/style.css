@@ -1,0 +1,146 @@
+*{	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+    overflow: hidden;
+}
+
+.top{
+	width: 80%;
+	height: 80px;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+ul{
+	list-style: none;
+	display: flex;
+}
+li{
+	margin: 0 8px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10%;
+}
+
+.content h1{
+	font-size: 40px;
+}
+span{
+	color: darkorange;
+}
+.content p{
+	margin: 40px 0;
+	color: #555;
+}
+.btn{
+	padding: 8px 20px;
+    background: #17910c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.strip{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70vh;
+    width: 30%;
+}
+
+.inner{
+    background: darkorange;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.inner h1{
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-size: 100px;
+    color: #ffc57f;
+}
+img{
+    width: 100%;
+    animation-name: img;
+    animation-iteration-count: 1;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+    
+}
+.img{
+    width: 300px;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+   
+}
+@keyframes img{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animate{
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+.overlay{
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkorange;
+    animation-name: animate;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    
+}
+.img-overlay{
+    animation-delay: 0.4s;
+}
